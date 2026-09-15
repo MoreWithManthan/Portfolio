@@ -1,0 +1,745 @@
+/* Compact profile and section rhythm from the supplied Sleek Portfolio reference. */
+.reference-portfolio {
+  min-height: 100dvh;
+  border-top: 0;
+  background: color-mix(in srgb, var(--background) 98%, var(--foreground));
+  color: var(--foreground);
+}
+.reference-portfolio .portfolio-shell,
+.reference-portfolio .site-header {
+  width: calc(100% - 3rem);
+  max-width: 51rem;
+}
+.reference-portfolio .site-header {
+  position: relative;
+  background: transparent;
+  backdrop-filter: none;
+}
+.reference-portfolio .site-header nav {
+  padding: 1rem 0;
+  min-height: 4.5rem;
+  gap: 1rem;
+  flex-wrap: nowrap;
+}
+.reference-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+  flex-wrap: wrap;
+}
+.reference-nav-links a {
+  font-size: 1rem;
+  color: var(--muted-foreground);
+}
+.reference-nav-links a:hover {
+  color: var(--foreground);
+}
+.reference-portfolio .nav-tools {
+  gap: 0.35rem;
+}
+.search-trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 2rem;
+  padding: 0.35rem 0.7rem;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+.search-trigger kbd {
+  background: var(--muted);
+  border-radius: 0.25rem;
+  padding: 0 0.25rem;
+  font-family: inherit;
+}
+.profile-summary {
+  padding-top: 2.6rem;
+}
+.profile-top {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.profile-avatar-frame {
+  position: relative;
+  flex-shrink: 0;
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #93c5fd;
+}
+.profile-avatar {
+  position: absolute;
+  width: 130%;
+  height: 130%;
+  max-width: none;
+  left: -15%;
+  top: -2%;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+.profile-identity {
+  min-width: 0;
+}
+.reference-portfolio .profile-identity h1 {
+  margin: 0 0 0.25rem;
+  font-size: clamp(1.6rem, 2.5vw, 1.9rem);
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  text-wrap: initial;
+  max-width: none;
+}
+.profile-byline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.1rem 0.7rem;
+  color: var(--muted-foreground);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.profile-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-width: 0;
+}
+.profile-email a {
+  overflow-wrap: anywhere;
+}
+.copy-email {
+  padding: 0.3rem;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  display: grid;
+  place-items: center;
+}
+.profile-location {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
+  margin-top: 0.4rem;
+}
+.profile-intro {
+  margin-top: 1.25rem;
+  font-size: 1.0625rem;
+  color: var(--muted-foreground);
+  line-height: 1.65;
+}
+.profile-tool-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.65rem;
+  color: var(--muted-foreground);
+}
+.profile-tool-row > span:first-child {
+  margin-right: 0.3rem;
+}
+.profile-tool-row .technology-token {
+  height: 2rem;
+  width: 2rem;
+}
+.profile-tool-row .technology-logo {
+  width: 1.45rem;
+  height: 1.45rem;
+}
+.reference-portfolio .social-logos {
+  gap: 0.45rem;
+}
+.reference-portfolio .social-logos a {
+  border: 0;
+  border-radius: 0.35rem;
+  background: transparent;
+  width: 2.1rem;
+  height: 2.5rem;
+  min-width: 2.1rem;
+  min-height: 2.5rem;
+  padding: 0.3rem;
+  color: var(--muted-foreground);
+}
+.reference-portfolio .social-logos a:hover {
+  color: var(--foreground);
+  background: var(--muted);
+}
+.reference-portfolio .profile-socials {
+  margin-top: 0.75rem;
+  margin-left: -0.3rem;
+}
+.reference-portfolio .content-section {
+  margin-top: 3rem;
+}
+.reference-portfolio .section-heading {
+  margin-bottom: 1.25rem;
+}
+.reference-portfolio .section-heading > p {
+  display: none;
+}
+.reference-portfolio .section-heading h2 {
+  font-size: 1.5rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+.reference-portfolio .timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.reference-portfolio .timeline article {
+  display: block;
+  padding: 0;
+  border: 0;
+  background: none;
+  border-radius: 0;
+}
+.reference-portfolio .timeline-icon {
+  display: none;
+}
+.reference-portfolio .timeline-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.reference-portfolio .timeline h3 {
+  font-size: 1.2rem;
+}
+.reference-portfolio .timeline-top > span {
+  font-size: 0.9375rem;
+  text-align: right;
+}
+.reference-portfolio .timeline .role {
+  font-size: 1rem;
+  color: var(--muted-foreground);
+  margin-top: 0.15rem;
+}
+.reference-portfolio .timeline p {
+  line-height: 1.65;
+}
+.experience-details {
+  margin-top: 0.45rem;
+}
+.experience-details summary {
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
+  width: fit-content;
+}
+.experience-details p {
+  max-width: 70ch;
+}
+.reference-portfolio .achievement-row {
+  margin-top: 1.5rem;
+  padding: 1rem 0;
+  gap: 1.25rem 2.5rem;
+}
+.reference-portfolio .achievement-row strong {
+  font-size: 0.9375rem;
+}
+.reference-portfolio .achievement-row span {
+  font-size: 0.875rem;
+}
+.reference-portfolio .project-grid {
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+.reference-portfolio .project-card {
+  border: 0;
+  border-bottom: 1px solid var(--border);
+  border-radius: 0;
+  padding: 0 0 1.5rem;
+  background: transparent;
+  box-shadow: none;
+}
+.reference-portfolio .project-card h3 {
+  font-size: 1.2rem;
+}
+.reference-portfolio .project-top {
+  margin-bottom: 0.9rem;
+}
+.reference-portfolio .project-description {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+.reference-portfolio .project-kind {
+  min-height: 0;
+  font-size: 0.8125rem;
+}
+.reference-portfolio .project-card details {
+  margin-top: 0.75rem;
+}
+.reference-portfolio #about .body-copy {
+  max-width: none;
+  font-size: 1rem;
+}
+.reference-portfolio .skill-groups {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 2rem;
+  row-gap: 1.5rem;
+}
+.reference-portfolio .skill-group {
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid var(--border);
+  background: transparent;
+  padding: 0 0 1rem;
+  gap: 0.7rem;
+}
+.reference-portfolio .skill-category-icon {
+  display: none;
+}
+.reference-portfolio .skill-list {
+  gap: 0.4rem;
+}
+.reference-portfolio .technology-token {
+  width: 2.7rem;
+  height: 2.7rem;
+}
+.reference-portfolio .technology-logo {
+  width: 1.7rem;
+  height: 1.7rem;
+}
+.reference-portfolio .profile-tool-row .technology-token {
+  width: 2rem;
+  height: 2rem;
+}
+.reference-portfolio .profile-tool-row .technology-logo {
+  width: 1.45rem;
+  height: 1.45rem;
+}
+.reference-portfolio .lab-launchers button {
+  background: transparent;
+}
+.reference-portfolio .email-link {
+  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+  overflow-wrap: anywhere;
+}
+.reference-portfolio footer {
+  margin-top: 3rem;
+  padding-bottom: 3rem;
+}
+/* Search mirrors the reference's keyboard navigation without adding empty pages. */
+.command-palette {
+  position: fixed;
+  margin: 12dvh auto 0;
+  width: min(34rem, calc(100% - 2rem));
+  max-height: 75dvh;
+  overflow: auto;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 0.8rem;
+  background: var(--background);
+  color: var(--foreground);
+  box-shadow: 0 20px 80px #0003;
+}
+.command-palette::backdrop {
+  background: #0005;
+  backdrop-filter: blur(3px);
+}
+.command-input {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+.command-input input {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  min-width: 0;
+  flex: 1;
+  padding: 0.3rem 0;
+  font-size: 1rem;
+}
+.command-palette [role='listbox'] {
+  padding: 0.5rem;
+}
+.command-palette [role='option'] {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  text-align: left;
+  border: 0;
+  background: none;
+  padding: 0.7rem 0.75rem;
+  border-radius: 0.35rem;
+  font-size: 0.9375rem;
+  color: inherit;
+}
+.command-palette [role='option'][aria-selected='true'] {
+  background: var(--muted);
+}
+.command-palette [role='option'] span {
+  color: var(--muted-foreground);
+}
+.command-hint,
+.command-empty {
+  padding: 0.75rem 1rem;
+  font-size: 0.8125rem;
+  color: var(--muted-foreground);
+}
+.command-hint {
+  border-top: 1px solid var(--border);
+}
+/* One active companion: original Oneko atlas or generated Manthan walk cycles. */
+.neko-filters {
+  position: absolute;
+  pointer-events: none;
+}
+.neko-companion {
+  position: fixed;
+  z-index: 35;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: grab;
+}
+.neko-companion:active {
+  cursor: grabbing;
+}
+.neko-sprite {
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-image: url('/oneko/oneko.gif');
+  background-position: -96px -96px;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  flex-shrink: 0;
+}
+.neko-human {
+  display: block;
+  width: 48px;
+  height: 48px;
+  background: url('/oneko/manthan-sprite.png') 0 -144px / 192px 192px no-repeat;
+  image-rendering: pixelated;
+  flex-shrink: 0;
+  pointer-events: none;
+}
+.neko-label {
+  position: absolute;
+  top: 46px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--background);
+  color: var(--foreground);
+  border: 1px solid var(--border);
+  border-radius: 0.3rem;
+  padding: 0.2rem 0.4rem;
+  font-size: 12px;
+  line-height: 1.35;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s;
+}
+.neko-companion:hover .neko-label,
+.neko-companion:focus-visible .neko-label {
+  opacity: 1;
+}
+.neko-picker {
+  position: fixed;
+  margin: 0;
+  padding: 0.85rem;
+  width: min(19rem, calc(100vw - 1rem));
+  max-height: calc(100dvh - 1rem);
+  overflow: auto;
+  border-radius: 0.75rem;
+  background: var(--background);
+  color: var(--foreground);
+  border: 1px solid var(--border);
+  box-shadow: 0 15px 70px #0003;
+}
+.neko-picker::backdrop {
+  background: #0001;
+}
+.neko-picker-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+.neko-picker-heading h2 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.neko-options {
+  display: grid;
+  gap: 0.15rem;
+}
+.neko-option {
+  width: 100%;
+  min-height: 54px;
+  border: 0;
+  border-radius: 0.4rem;
+  background: transparent;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.35rem 0.5rem;
+  text-align: left;
+}
+.neko-option > span:not(.neko-sprite):not(.neko-human) {
+  flex: 1;
+}
+.neko-option strong,
+.neko-option small {
+  display: block;
+}
+.neko-option strong {
+  font-size: 0.9375rem;
+  font-weight: 550;
+}
+.neko-option small {
+  color: var(--muted-foreground);
+  font-size: 0.8125rem;
+}
+.neko-option:hover,
+.neko-option[aria-pressed='true'] {
+  background: var(--muted);
+}
+.neko-picker-settings {
+  border-top: 1px solid var(--border);
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+}
+.neko-picker-settings label,
+.neko-picker-settings button {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+.neko-picker-settings input {
+  accent-color: var(--foreground);
+  width: 16px;
+  height: 16px;
+}
+.neko-picker-settings button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+}
+.neko-picker-hint {
+  color: var(--muted-foreground);
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+}
+@media (max-width: 760px) {
+  .reference-portfolio .portfolio-shell,
+  .reference-portfolio .site-header {
+    width: calc(100% - 2.5rem);
+  }
+  .reference-nav-links {
+    gap: 1rem;
+  }
+  .reference-nav-links a {
+    font-size: 0.9375rem;
+  }
+  .search-trigger span {
+    display: none;
+  }
+  .search-trigger {
+    padding: 0.5rem;
+    border: 0;
+  }
+  .reference-portfolio .nav-tools {
+    gap: 0;
+  }
+  .reference-portfolio .nav-tools .icon-button {
+    padding: 0.5rem;
+  }
+  .profile-summary {
+    padding-top: 1.75rem;
+  }
+  .profile-avatar-frame {
+    width: 6rem;
+    height: 6rem;
+  }
+  .profile-top {
+    gap: 1rem;
+  }
+  .profile-byline {
+    font-size: 0.9375rem;
+  }
+  .profile-email {
+    flex-basis: 100%;
+  }
+  .reference-portfolio .content-section {
+    margin-top: 2.5rem;
+  }
+  .reference-portfolio .timeline-top {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 0.2rem 0.75rem;
+  }
+  .reference-portfolio .timeline-top > span {
+    text-align: left;
+  }
+  .reference-portfolio .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .reference-portfolio .site-header nav {
+    flex-wrap: wrap;
+    gap: 0.2rem 0.6rem;
+  }
+  .reference-nav-links {
+    flex: 1;
+    gap: 0.9rem;
+  }
+  .reference-nav-links a {
+    font-size: 0.875rem;
+  }
+  .reference-portfolio .nav-tools .icon-button {
+    padding: 0.35rem;
+  }
+  .profile-top {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .profile-avatar-frame {
+    width: 6rem;
+    height: 6rem;
+  }
+  .profile-byline {
+    display: block;
+  }
+  .profile-email {
+    margin-top: 0.15rem;
+    display: flex;
+  }
+  .reference-portfolio .timeline-top {
+    flex-direction: column;
+  }
+  .reference-portfolio .skill-groups {
+    grid-template-columns: 1fr;
+  }
+  .reference-portfolio .social-logos a {
+    width: 2.45rem;
+    min-width: 2.45rem;
+    height: 2.75rem;
+  }
+  .reference-portfolio .achievement-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .neko-label {
+    transition: none;
+  }
+}
+
+.experience-toggle {
+  display: block;
+  margin: 1.3rem auto 0;
+  padding: 0.45rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: transparent;
+  color: var(--foreground);
+  font-size: 1rem;
+  cursor: pointer;
+}
+.experience-toggle:hover {
+  background: var(--muted);
+}
+.reference-portfolio [hidden] {
+  display: none !important;
+}
+.reference-portfolio .project-top {
+  display: none;
+}
+.reference-portfolio .project-kind {
+  margin-bottom: 0.25rem;
+}
+.reference-portfolio .project-card .project-description {
+  min-height: 0;
+}
+.reference-portfolio .timeline article > div {
+  max-width: none;
+}
+@media (max-width: 380px) {
+  .reference-portfolio .site-header nav {
+    gap: 0.4rem;
+  }
+  .reference-nav-links {
+    gap: 0.7rem;
+  }
+  .reference-portfolio .portfolio-shell,
+  .reference-portfolio .site-header {
+    width: calc(100% - 2rem);
+  }
+}
+
+.email-me-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: transparent;
+  color: var(--foreground);
+  font-size: 0.9375rem;
+  line-height: 1.4;
+  text-decoration: none;
+}
+.email-me-button:hover {
+  background: var(--muted);
+}
+.reference-portfolio .email-link.email-me-button {
+  font-size: 1rem;
+  padding: 0.65rem 1rem;
+}
+
+.spotify-last-played {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: var(--muted-foreground);
+  line-height: 1.6;
+}
+.spotify-last-played > svg {
+  flex-shrink: 0;
+  align-self: center;
+}
+.spotify-last-played a {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.spotify-last-played a:hover {
+  color: var(--foreground);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.profile-byline > .profile-email {
+  overflow-wrap: anywhere;
+}

@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /ops
+# CTF training clue. This is not access control.
