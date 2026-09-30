@@ -10,3 +10,5 @@
 - The oneko cat sprite and frame mapping originate from adryd325/oneko.js (MIT; `dist/oneko/LICENSE`). The Manthan sprite is retained from the separate original portfolio, based on the supplied portrait.
 
 This project has no visible template-credit footer. License notices for bundled third-party assets remain in the codebase.
+
+- Seven companion portraits were supplied by the user. Their full-body walking sprite sheets were generated from those references for this portfolio.

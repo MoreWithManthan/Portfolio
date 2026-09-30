@@ -38,3 +38,44 @@ html,body{background:var(--page)}
 @media(max-width:720px){.topbar .theme-toggle{position:absolute;right:14px;top:10px;padding:7px;width:40px;min-height:40px;height:40px}.topbar .brand{max-width:calc(100% - 52px);font-size:16px}.topbar nav{margin-left:0;gap:10px}.interest-strip{padding:15px 18px;gap:12px 20px}.interest-strip li{font-size:13px;gap:9px}.interest-strip svg,.interest-strip img{width:22px;height:22px}.project-dialog{width:calc(100% - 24px);max-height:calc(100dvh - 24px)}#project-detail{grid-template-columns:1fr;gap:22px;padding:22px}.detail-overview{border-right:0;border-bottom:var(--line) solid;padding:0 0 22px}.detail-title{font-size:32px;margin-bottom:13px}.detail-description{font-size:15px}.project-dialog .dialog-head{padding:10px 17px}.project-dialog .dialog-nav{padding:10px 17px}.detail-subtitle{font-size:17px}.detail-list{font-size:14px}.theme-body{padding:20px 18px 8px}.theme-footer{padding:14px 18px}.palette-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}.palette-name{font-size:11px}}
 @media(max-width:380px){.topbar .brand{font-size:14px;gap:7px}.interest-strip{gap:9px 14px;padding:12px 14px}.interest-strip li{font-size:12px;gap:7px}.interest-strip svg,.interest-strip img{width:20px;height:20px}.theme-choices{gap:7px}.theme-choice{font-size:12px}.palette-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.palette-name{font-size:12px}.detail-title{font-size:28px}}
 @media(min-width:721px) and (max-height:740px){#project-detail{padding:20px 24px;gap:25px}.detail-title{font-size:33px;margin-bottom:12px}.detail-description{font-size:15px;line-height:1.55}.detail-list{line-height:1.55}.detail-list li{margin-bottom:10px}.project-dialog .detail-tags{margin-top:16px}.detail-eyebrow{margin-bottom:10px}.detail-links{margin-top:14px}}
+
+/* Human companions: roomy biographies and one consistently sized roaming sprite. */
+.neko-companion{width:64px;height:64px}
+.neko-human{width:64px;height:64px;background-size:256px 256px;background-position:0 -192px}
+.neko-label{top:62px}
+.neko-dialog{width:min(580px,calc(100% - 32px));max-height:calc(100dvh - 32px);overflow:auto}
+.neko-dialog .dialog-head{position:sticky;top:0;z-index:2;background:var(--cream)}
+.neko-option{gap:12px;min-width:0;padding:12px}
+.neko-option>span{min-width:0}
+.neko-option small{font-size:13px;line-height:1.45}
+.neko-portrait{width:64px;height:64px;flex:0 0 64px;object-fit:contain;object-position:center;background:var(--blue,#8cbdf4);border:var(--line) solid var(--ink);border-radius:var(--control-radius);image-rendering:pixelated}
+.neko-identity{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.neko-identity strong{font-size:18px}
+.neko-identity p{font-size:14px;line-height:1.5;margin:4px 0 0}
+.neko-comment{margin:0 0 18px;padding:14px;border-left:4px solid var(--ink);background:var(--yellow);font-size:14px;line-height:1.6}
+.neko-comment[hidden]{display:none}
+@media(max-width:520px){.neko-options{grid-template-columns:1fr;padding:16px}.neko-option{gap:14px;padding:12px}.neko-option small{font-size:13px}.neko-option strong{font-size:16px}.neko-settings{padding:0 16px 20px}}
+
+.neko-human{position:relative;background:none}
+.neko-frame{position:absolute;bottom:2px;display:block;background-repeat:no-repeat;image-rendering:pixelated}
+
+/* Keep tab and card outlines on the same origin, including fractional zoom. */
+.project-folder{border:0;padding:var(--line)}
+.project-folder::before{content:"";position:absolute;inset:0;border:var(--border);border-radius:inherit;pointer-events:none;z-index:1}
+.project-folder>.folder-tab{left:0;bottom:calc(100% - var(--line));height:calc(30px + var(--line));z-index:2}
+
+/* Seam fix: the project cards used a cream background under a border overlay, so anti-aliasing at
+   fractional pixel positions leaked a thin light line between the colored art and the border.
+   The card now sits on ink, so any sub-pixel gap blends into the border instead. */
+.project-folder{background:var(--ink)}
+.project-folder>.project-open{background:transparent}
+.project-folder .project-copy{background:var(--cream)}
+.project-folder>.folder-tab{height:calc(31px + var(--line))}
+
+/* Technology strip: keep the original cream look. The cream now lives on the strip itself (side gutters are
+   padding, not margin), so the ink seam-guard behind the card never shows. */
+.project-folder{--tx:22px}
+@media(max-width:1000px){.project-folder{--tx:16px}}
+@media(max-width:720px){.project-folder{--tx:22px}}
+.project-folder .project-tech{position:relative;margin:0;padding:14px var(--tx) 17px;border-top:0;background:var(--cream);border-radius:0 0 max(0px,calc(var(--radius) - var(--line))) max(0px,calc(var(--radius) - var(--line)))}
+.project-folder .project-tech::before{content:"";position:absolute;top:0;left:var(--tx);right:var(--tx);height:1px;background:#c3c2b8}
